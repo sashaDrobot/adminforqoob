@@ -12,8 +12,6 @@ class Main extends Model {
       $this->db->query('INSERT INTO orders VALUES (NULL, :name, :phone, :email, :text);',$params);
   }
 
-  public function contactValidate($post) {
 
-  }
 
 }

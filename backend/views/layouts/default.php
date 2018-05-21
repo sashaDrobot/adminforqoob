@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/src/css/main.css">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
     <script src="/src/js/jquery.js"></script>
-    <script src="/src/js/form.js"></script>
+    <script src="/src/js/orders.js"></script>
     <script src="/src/js/popper.js"></script>
     <script src="/src/js/bootstrap.js"></script>
 </head>

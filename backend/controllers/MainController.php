@@ -22,7 +22,6 @@ class MainController extends Controller {
             'text' => $_POST['text'],
         ];
         $this->model->insertOrder($vars);
-
         $this->view->redirect('/');
     }
 

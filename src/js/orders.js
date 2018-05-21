@@ -10,12 +10,8 @@ $(document).ready(function() {
 			cache: false,
 			processData: false,
 			success: function(result) {
-                json = jQuery.parseJSON(result);
-                if (json.url) {
-                    window.location.href = '/' + json.url;
-                } else {
-                    alert(json.status + ' - ' + json.message);
-                }
+				alert('Ваше сообщение успешно отправлено!');
+                window.location.replace('/');
 			},
 		});
 	});

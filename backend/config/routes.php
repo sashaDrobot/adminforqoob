@@ -39,7 +39,6 @@ return [
     ],
 
     //AdminController
-
     'admin/login' => [
         'controller' => 'admin',
         'action' => 'login',
@@ -49,11 +48,21 @@ return [
 		'controller' => 'admin',
 		'action' => 'orders',
 	],
-	
+
 	'admin/processed' => [
 		'controller' => 'admin',
 		'action' => 'processed',
 	],
+
+    'admin/processed/{id:\d+}' => [
+        'controller' => 'admin',
+        'action' => 'processed',
+    ],
+
+    'admin/delete/{id:\d+}' => [
+        'controller' => 'admin',
+        'action' => 'delete',
+    ],
 	
     'admin/logout' => [
         'controller' => 'admin',

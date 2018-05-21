@@ -17,53 +17,22 @@ class Admin extends Model {
 		return true;
 	}
 
-	public function postValidate($post, $type) {
-		$nameLen = iconv_strlen($post['name']);
-		$descriptionLen = iconv_strlen($post['description']);
-		$textLen = iconv_strlen($post['text']);
-		if ($nameLen < 3 or $nameLen > 100) {
-			$this->error = 'Название должно содержать от 3 до 100 символов';
-			return false;
-		} elseif ($descriptionLen < 3 or $descriptionLen > 100) {
-			$this->error = 'Описание должно содержать от 3 до 100 символов';
-			return false;
-		} elseif ($textLen < 10 or $textLen > 5000) {
-			$this->error = 'Текст должнен содержать от 10 до 5000 символов';
-			return false;
-		}
-		return true;
-	}
+    public function isOrderExists($id) {
+        $params = [
+            'id' => $id,
+        ];
+        return $this->db->column('SELECT id FROM orders WHERE id = :id', $params);
+    }
 
-	public function orderAdd($post) {
-		$params = [
-			'id' => null,
-			'name' => $post['name'],
-			'description' => $post['description'],
-			'text' => $post['text'],
-		];
-		$this->db->query('INSERT INTO posts VALUES (:id, :name, :description, :text)', $params);
-		return $this->db->lastInsertId();
-	}
+	public function selectOrders() {
+	    return $vars = $this->db->row('SELECT * FROM orders');
+    }
 
-	public function isOrderExists($id) {
-		$params = [
-			'id' => $id,
-		];
-		return $this->db->column('SELECT id FROM posts WHERE id = :id', $params);
-	}
-
-	public function orderDelete($id) {
-		$params = [
-			'id' => $id,
-		];
-		$this->db->query('DELETE FROM posts WHERE id = :id', $params);
-	}
-
-	public function orderData($id) {
-		$params = [
-			'id' => $id,
-		];
-		return $this->db->row('SELECT * FROM posts WHERE id = :id', $params);
-	}
+    public function orderDelete($id) {
+        $params = [
+            'id' => $id,
+        ];
+        $this->db->query('DELETE FROM orders WHERE id = :id', $params);
+    }
 
 }

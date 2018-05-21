@@ -9,7 +9,6 @@ class AdminController extends Controller {
     public function __construct($route) {
         parent::__construct($route);
         $this->view->layout='admin';
-
     }
 
     public function adminAction() {
@@ -31,7 +30,8 @@ class AdminController extends Controller {
     }
 
     public function ordersAction() {
-        $this->view->render('Список заказов');
+        $vars = $this->model->selectOrders();
+        $this->view->render('Список заказов', $vars);
     }
 
     public function processedAction() {
@@ -39,11 +39,12 @@ class AdminController extends Controller {
     }
 
     public function deleteAction() {
-		if (!$this->model->isOrderExists($this->route['id'])) {
-			$this->view->errorCode(404);
-		}
-		$this->model->orderDelete($this->route['id']);
-		$this->view->redirect('admin/orders');
+        debug($this->route);
+	//	if (!$this->model->isOrderExists($this->route['id'])) {
+	//		$this->view->errorCode(404);
+	//	}
+	//	$this->model->orderDelete($this->route['id']);
+	//	$this->view->redirect('admin/orders');
 	}
 
 	public function logoutAction() {
