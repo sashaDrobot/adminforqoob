@@ -9,6 +9,6 @@ return [
         'orders',
         'processed',
         'delete',
-        'logout'
+        'logout',
     ]
 ];

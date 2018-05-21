@@ -12,12 +12,12 @@ class AdminController extends Controller {
     }
 
     public function adminAction() {
-        $this->view->redirect('login');
+        $this->view->redirect('admin/login');
     }
 
     public function loginAction() {
         if (isset($_SESSION['admin'])) {
-			$this->view->redirect('orders');
+			$this->view->redirect('admin/orders');
 		}
 		if (!empty($_POST)) {
 			if (!$this->model->loginValidate($_POST)) {
@@ -39,17 +39,17 @@ class AdminController extends Controller {
     }
 
     public function deleteAction() {
-        debug($this->route);
-	//	if (!$this->model->isOrderExists($this->route['id'])) {
-	//		$this->view->errorCode(404);
-	//	}
-	//	$this->model->orderDelete($this->route['id']);
-	//	$this->view->redirect('admin/orders');
+
+		if (!$this->model->isOrderExists($this->route['id'])) {
+			$this->view->errorCode(404);
+		}
+		$this->model->orderDelete($this->route['id']);
+		$this->view->redirect('admin/orders');
 	}
 
 	public function logoutAction() {
 		unset($_SESSION['admin']);
-		$this->view->redirect('login');
+		$this->view->redirect('admin/login');
 	}
 
 }

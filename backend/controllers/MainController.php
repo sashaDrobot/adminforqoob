@@ -16,13 +16,13 @@ class MainController extends Controller {
 
     public function sendorderAction() {
         $vars = [
-            'name' => $_POST['name'],
-            'phone' => $_POST['phone'],
-            'email' => $_POST['email'],
-            'text' => $_POST['text'],
+            'name' => trim($_POST['name']),
+            'phone' => trim($_POST['phone']),
+            'email' => trim($_POST['email']),
+            'text' => trim($_POST['text']),
         ];
         $this->model->insertOrder($vars);
-        $this->view->redirect('/');
+        $this->view->redirect('');
     }
 
     public function aboutAction() {
