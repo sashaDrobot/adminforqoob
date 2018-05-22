@@ -5,7 +5,7 @@
         </div>
     </div>
 
-    <form class="text-center" action="/sendorder" method="post" id="feedback">
+    <form class="text-center" action="send" method="post" id="feedback">
         <div class="form-group">
             <input type="text" class="form-control" id="InputName" placeholder="ENTER YOUR NAME" name="name" required>
         </div>

@@ -23,7 +23,7 @@
                                         <td><?php echo htmlspecialchars($val['phone'], ENT_QUOTES); ?></td>
                                         <td><?php echo htmlspecialchars($val['email'], ENT_QUOTES); ?></td>
                                         <td><?php echo htmlspecialchars($val['text'], ENT_QUOTES); ?></td>
-                                        <td><a href="/admin/edit/<?php echo $val['id']; ?>" class="btn btn-primary">Обработан</a></td>
+                                        <td><a href="/admin/processed/<?php echo $val['id']; ?>" class="btn btn-primary">Обработан</a></td>
                                         <td><a href="/admin/delete/<?php echo $val['id']; ?>" class="delete btn btn-danger">Удалить</a></td>
                                     </tr>
                                 <?php endforeach; ?>
@@ -35,14 +35,6 @@
         </div>
     </div>
 </div>
-
-<footer class="sticky-footer">
-    <div class="container">
-        <div class="text-center">
-            <small>&copy; 2018, qoob</small>
-        </div>
-    </div>
-</footer>
 
 <script>
     var b = document.getElementsByTagName('body')[0];

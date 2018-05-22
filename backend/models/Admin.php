@@ -24,9 +24,20 @@ class Admin extends Model {
         return $this->db->column('SELECT id FROM orders WHERE id = :id', $params);
     }
 
-	public function selectOrders() {
-	    return $vars = $this->db->row('SELECT * FROM orders');
+	public function selectOrders($condition) {
+	    $params = [
+	        'condition' => $condition,
+        ];
+	    return $vars = $this->db->row('SELECT * FROM orders WHERE processed=:condition;', $params);
     }
+
+    public function processedOrder($id) {
+        $params = [
+            'id' => $id,
+        ];
+        $this->db->query('UPDATE orders SET processed=1 WHERE id = :id;', $params);
+    }
+
 
     public function orderDelete($id) {
         $params = [

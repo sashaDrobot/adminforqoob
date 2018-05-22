@@ -33,9 +33,9 @@ return [
         'action' => 'feedback'
     ],
 
-    'sendorder' => [
+    'send' => [
         'controller' => 'main',
-        'action' => 'sendorder'
+        'action' => 'send'
     ],
 
     //AdminController
@@ -56,7 +56,7 @@ return [
 
     'admin/processed/{id:\d+}' => [
         'controller' => 'admin',
-        'action' => 'processed',
+        'action' => 'processedorder',
     ],
 
     'admin/delete/{id:\d+}' => [

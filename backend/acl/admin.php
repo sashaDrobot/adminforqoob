@@ -8,6 +8,7 @@ return [
     'admin' => [
         'orders',
         'processed',
+        'processedorder',
         'delete',
         'logout',
     ]

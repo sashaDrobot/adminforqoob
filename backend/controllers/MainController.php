@@ -14,15 +14,14 @@ class MainController extends Controller {
         $this->view->render('Feedback');
     }
 
-    public function sendorderAction() {
+    public function sendAction() {
         $vars = [
-            'name' => trim($_POST['name']),
-            'phone' => trim($_POST['phone']),
-            'email' => trim($_POST['email']),
-            'text' => trim($_POST['text']),
+            'name' => $_POST['name'],
+            'phone' => $_POST['phone'],
+            'email' => $_POST['email'],
+            'text' => $_POST['text'],
         ];
         $this->model->insertOrder($vars);
-        $this->view->redirect('');
     }
 
     public function aboutAction() {

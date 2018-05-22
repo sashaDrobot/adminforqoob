@@ -30,16 +30,24 @@ class AdminController extends Controller {
     }
 
     public function ordersAction() {
-        $vars = $this->model->selectOrders();
+        $vars = $this->model->selectOrders('0');
         $this->view->render('Список заказов', $vars);
     }
 
     public function processedAction() {
-        $this->view->render('Список заказов');
+        $vars = $this->model->selectOrders('1');
+        $this->view->render('Список обработанных заказов', $vars);
+    }
+
+    public function processedorderAction() {
+        if (!$this->model->isOrderExists($this->route['id'])) {
+            $this->view->errorCode(404);
+        }
+        $this->model->processedOrder($this->route['id']);
+        $this->view->redirect('admin/orders');
     }
 
     public function deleteAction() {
-
 		if (!$this->model->isOrderExists($this->route['id'])) {
 			$this->view->errorCode(404);
 		}

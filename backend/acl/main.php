@@ -8,7 +8,7 @@ return [
         'services',
         'contacts',
         'feedback',
-        'sendorder'
+        'send'
     ],
     'admin' => [
 
