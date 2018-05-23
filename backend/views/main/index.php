@@ -172,7 +172,7 @@
             <img class="img-fluid" src="/src/img/prom.png">
         </div>
         <div class="col-md-6 order-md-1 portfolio-element-text text-center align-self-center">
-            <h2>Prominvset Plastic</h2>
+            <h2>Prominvest Plastic</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
             </p>
@@ -188,7 +188,7 @@
             <img class="img-fluid" src="/src/img/tiers.png">
         </div>
         <div class="col-md-6 portfolio-element-text text-center align-self-center">
-            <h2>Prominvset Plastic</h2>
+            <h2>Prominvest Plastic</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
             </p>
@@ -204,7 +204,7 @@
             <img class="img-fluid" src="/src/img/prom.png">
         </div>
         <div class="col-md-6 order-md-1 portfolio-element-text text-center align-self-center">
-            <h2>Prominvset Plastic</h2>
+            <h2>Prominvest Plastic</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
             </p>

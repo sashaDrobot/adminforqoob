@@ -417,7 +417,7 @@ body .landing .text {
     /************ end-adv*******************/
 /********** portfolio **********/
 
-.portfolio-container{
+.portfolio-main-container{
     text-transform: uppercase;
     background: url("../img/back_portfolio.png") no-repeat center/cover;
     background-attachment: fixed;
@@ -620,9 +620,11 @@ body .landing .text {
 }
 .portfolio-header-container{
     background: url("../img/backphoto.png") no-repeat center/cover;
+    background-attachment: fixed;
 }
 .services-header-container{
     background: url("../img/back1.png") no-repeat center/cover;
+    background-attachment: fixed;
 }
 .portfolio-header,.services-header{
     font-family: Acrom, sans-serif;
