@@ -62,10 +62,6 @@
 
     <?php echo $content; ?>
 
-    <div class="contacts-portfolio">
-        <a class="cont" href="contacts.html">CONTACTS</a>
-        <a class="port" href="portfolio.html">PORTFOLIO</a>
-    </div>
     <script src="/src/js/menu.js"></script>
 </body>
 </html>
