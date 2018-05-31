@@ -35,6 +35,46 @@ a,a:hover,a:active,a:focus{
     width: 100%;
     background-color: black;
 }
+.loaderArea {
+    background: black;
+    overflow: hidden;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right:0;
+    bottom:0;
+    z-index: 100000;
+}
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+}
+
+.loader>div{
+    position: relative;
+    color: white;
+}
+.loader>div>span{
+    display: inline-block;
+    font-size: 9vw;
+    font-family: Acrom-light, sans-serif;
+    letter-spacing: -1vw;
+    animation: zoom 1s ease-in-out;
+}
+@keyframes zoom {
+    from{
+      color: black;
+
+    }
+    to{
+        color: white;
+
+    }
+}
 
 /* ------------- video-background ---------------- */
 body .landing {
@@ -152,6 +192,7 @@ body .landing .text {
     position: absolute;
     top: 0;
     right: 0px;
+    transition: all .3s;
 }
 #main-menu span:nth-child(2){
     top: 8px;
@@ -160,6 +201,17 @@ body .landing .text {
 #main-menu span:last-child{
     top: 16px;
     width: 28px;
+}
+.cross-menu #main-hum span:first-child{
+    opacity: .0;
+}
+.cross-menu #main-hum span:nth-child(2){
+    transform: rotate(45deg);
+    width: 28px;
+}
+.cross-menu #main-hum span:last-child{
+    top: 8px;
+    transform: rotate(-45deg);
 }
 /* ------------- end of main-menu  ---------------- */
 
@@ -194,17 +246,6 @@ body .landing .text {
 }
 .navbar-collapse>.navbar-nav{
     margin-left: -172px;
-}
-.navbar-brand{
-    margin-top: 45px;
-}
-
-.languages,.society{
-    position: fixed;
-    height: 100vh;
-    width: 30px;
-}
-.languages{
 }
 .navbar-brand{
     margin-top: 45px;
@@ -300,6 +341,7 @@ body .landing .text {
     background-color: white;
 }
 .container-header{
+    font-size: 40px;
     font-weight: 600;
     margin-top: 30vh;
     margin-bottom: 50px;
@@ -456,6 +498,112 @@ body .landing .text {
             -1px 1px 0 #a7c0ed,
             1px 1px 0 #a7c0ed;
 }
+
+.portfolio-preview{
+    padding: 0;
+    position: relative;
+}
+.portfolio-preview img{
+    width: 100%;
+}
+.portfolio-preview .portfolio-preview-colored-wrapper{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: background-color .3s linear,opacity .3s linear;
+}
+.portfolio-preview .portfolio-preview-colored-wrapper>div{
+    height: 100%;
+}
+.portfolio-preview .portfolio-preview-colored-wrapper h2{
+    color: white;
+    font-family: Acrom-bold, sans-serif;
+}
+.portfolio-preview .portfolio-preview-colored-wrapper .portfolio-button{
+    cursor: pointer;
+    font-size: 12px;
+    line-height: 31px;
+    width: 126px;
+    height: 31px;
+    display: inline-block;
+    transition: all .2s linear;
+    border: none;
+    color: white;
+    border-radius: 3px;
+    background-color: rgba(255,255,255,.3);
+}
+.portfolio-preview .portfolio-preview-colored-wrapper .portfolio-button:hover{
+    background-color: rgba(255,255,255,.1);
+}
+.portfolio-preview hr{
+    border-top: 1px solid white;
+   width: 40px;
+    margin: 10px 0 20px 0;
+}
+.portfolio-button::before, .portfolio-button::after {
+    box-sizing: inherit;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.draw {
+    transition: color 0.25s;
+}
+.draw::before, .draw::after {
+    border: 1px solid transparent;
+    width: 0;
+    height: 0;
+}
+.draw::before {
+    top: 0;
+    left: 0;
+}
+.draw::after {
+    bottom: 0;
+    right: 0;
+}
+.draw:hover {
+    color: #fff;
+}
+.draw:hover::before, .draw:hover::after {
+    width: 100%;
+    height: 100%;
+}
+.draw:hover::before {
+    border-top-color: #fff;
+    border-right-color: #fff;
+    transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
+}
+.draw:hover::after {
+    border-bottom-color: #fff;
+    border-left-color: #fff;
+    transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
+}
+
+.portfolio-preview:first-child .portfolio-preview-colored-wrapper{
+    background-color: rgba(54,103,53,.0);
+    opacity: .0;
+
+}
+.portfolio-preview:first-child .portfolio-preview-colored-wrapper:hover{
+    background-color: rgba(54,103,53,.75);
+    opacity: 1.0;
+}
+.portfolio-preview:nth-child(2) .portfolio-preview-colored-wrapper{
+    background-color: rgba(100,0,0,.0);
+    opacity: .0;
+
+}
+.portfolio-preview:nth-child(2) .portfolio-preview-colored-wrapper:hover{
+    background-color: rgba(100,0,0,.75);
+    opacity: 1.0;
+}
+
 /********** end-portfolio **********/
 
 /********** buttons **************/
@@ -507,6 +655,7 @@ body .landing .text {
     background-attachment: fixed;
     min-height: 100vh;
 }
+
 .contacts-main-row{
     margin-top: 100px;
 }
@@ -858,6 +1007,104 @@ textarea{
 
 /* RESPONSIVE CSS
 -------------------------------------------------- */
+@media screen and (max-width: 992px){
+    #head{
+        background-color: white;
+        height: 152px;
+        border-bottom:1px solid black;
+    }
+    .navbar-brand{
+        margin: 0;
+        display: inline-block;
+    }
+    .navbar-brand img{
+        width: 208px;
+        height: auto;
+    }
+    #main-menu span{
+        height: 4px;
+        width: 64px;
+        background-color: black;
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        right: 0px;
+    }
+    #main-menu span:nth-child(2){
+        top: 16px;
+        width: 48px;
+    }
+    #main-menu span:last-child{
+        top: 32px;
+        width: 56px;
+    }
+    .cross-menu #main-hum span:nth-child(2){
+        width: 56px;
+    }
+    .cross-menu #main-hum span:last-child{
+        top: 16px;
+    }
+
+
+    .society,.languages,.contacts-portfolio{
+        display: none !important;
+    }
+    .menu-wrapper{
+        text-align: center;
+    }
+    #rightside-menu a{
+        font-size: 5em;
+    }
+    .main h5{
+        display: none;
+    }
+    .main-header-text,.main-header-text:first-child,.main-header-text:last-child{
+        font-family: Acrom-bold, sans-serif;
+
+        margin: 0;
+    }
+    .advantages-container .advantages-elem img,.why-us-adv-elem>img{
+        width: 40%;
+        height: auto;
+    }
+    .advantages-container .advantages-elem p{
+        color: #777;
+    }
+    .services-block h3{
+        font-size: 2.5em;
+    }
+    .services-block>.services-front p{
+        font-size: 1.3em;
+    }
+    .portfolio-main-container,.contacts-container,.who-we-container,.why-us-container,.contact-us-container,.feedback-container{
+        min-height: 200px;
+        height: auto;
+    }
+    .contacts-inform{
+        text-align: center;
+    }
+    .contacts-inform ul{
+        padding-left: 0;
+    }
+    .advantages-container .advantages-inner h3,.why-us-adv-elem h4{
+        font-size: 2.5em;
+        width: auto;
+    }
+
+    .contacts-main-row h1,.container-header{
+        font-size: 4.5em;
+    }
+    .contacts-main-row h5, .contacts-main-row li, .advantages-container .advantages-inner p,.why-us-adv-elem p{
+        font-size: 2.5em;
+    }
+    .copyright-qoob h6{
+        font-size: 2.5em;
+    }
+    .why-us-adv-elem {
+        width: auto;
+    }
+}
+
 
 @media (min-width: 40em) {
     /* Bump up size of carousel content */

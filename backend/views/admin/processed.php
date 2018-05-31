@@ -16,7 +16,6 @@
                                     <th>Сообщение</th>
                                     <th>Дата</th>
                                     <th></th>
-                                    <th></th>
                                 </tr>
                                 <?php foreach ($vars as $val): ?>
                                     <tr>

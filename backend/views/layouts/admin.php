@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title><?php echo $title; ?></title>
+    <link rel="shortcut icon" href="/src/img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/src/img/favicon.ico" type="image/x-icon">
     <link href="/src/css/bootstrap.css" rel="stylesheet">
     <link href="/src/css/admin.css" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">

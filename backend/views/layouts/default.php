@@ -3,6 +3,8 @@
 <head>
     <title><?php echo $title; ?></title>
     <meta charset="UTF-8">
+    <link rel="shortcut icon" href="/src/img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/src/img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <link rel="stylesheet" href="/src/css/main.css">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
