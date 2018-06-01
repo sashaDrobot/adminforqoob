@@ -26,16 +26,16 @@
                             <a href="/">Main</a>
                         </div>
                         <div class="col-lg-6 col-sm-12 col-xs-12">
-                            <a href="about.html">About</a>
+                            <a href="/about">About</a>
                         </div>
                         <div class="col-lg-6 col-sm-12 col-xs-12">
-                            <a href="portfolio.html">Portfolio</a>
+                            <a href="/portfolio">Portfolio</a>
                         </div>
                         <div class="col-lg-6 col-sm-12 col-xs-12">
-                            <a href="services.html">Services</a>
+                            <a href="/services">Services</a>
                         </div>
                         <div class="col-lg-6 col-sm-12 col-xs-12">
-                            <a href="contacts.html">Contacts</a>
+                            <a href="/contacts">Contacts</a>
                         </div>
                     </div>
 

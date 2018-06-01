@@ -32,6 +32,10 @@ class MainController extends Controller {
         $this->view->render('Portfolio');
     }
 
+    public function servicesAction() {
+        $this->view->render('Services');
+    }
+
     public function contactsAction() {
         $this->view->render('Contacts');
     }
